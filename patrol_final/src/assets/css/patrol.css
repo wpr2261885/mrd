@@ -1,0 +1,635 @@
+*{
+  list-style: none;
+  resize: none;
+  margin:0;
+  padding:0;
+}
+*::-webkit-scrollbar {
+  height: 10px !important;
+  width:10px !important;
+}
+*::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+  border-radius: 10px !important;
+  -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2) !important;
+  background: #535353 !important;
+}
+*::-webkit-scrollbar-track {/*滚动条里面轨道*/
+  -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2) !important;
+  border-radius: 10px !important;
+  background: #EDEDED !important;
+}
+em{
+  margin-left:10px;
+}
+h1{
+  font-size:24px;
+  padding:15px 0 0 15px;
+}
+h3{
+  font-size:14px;
+  color:#1A5F6C;
+  padding-left:30px;
+}
+thead{
+  background:#F2F2F2 !important;
+}
+.body{
+  background:#ECF0F5;
+  min-height:921px;
+}
+.content{
+  padding:15px;
+}
+.content-header-title{
+  width:100%;
+  height:41px;
+  border-bottom:1px solid #F4F4F4;
+  margin-bottom:20px;
+  padding:5px 0 5px 0;
+}
+.content-header-title>span:first-child{
+  font-size:18px;
+  line-height:30px;
+}
+.content-header-title>span:last-child{
+  float:right;
+}
+.red-border{
+  border:1px solid red !important;
+}
+/*主体部分*/
+.box{
+  border-top:3px solid #3c8dbc;
+  border-radius:4px;
+  background:white;
+  padding:0 15px 15px 15px;
+  position:relative;
+}
+/*每行*/
+.row{
+  border-bottom:1px solid #f4f4f4;
+  padding:15px;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content:space-around;
+  align-content:space-around;
+}
+
+
+/*巡店总览*/
+.row-item{
+  background:#F2F2F2;
+  border-radius:5px;
+  box-shadow: #0c0c0c 1px 1px 3px;
+  padding:15px 30px 15px 50px;
+  min-height:100px;
+  margin-bottom:15px;
+}
+/*红色百分比*/
+.redPercent{
+  color:red;
+  margin-right:10px;
+  font-size:24px;
+}
+/*左边柱形图*/
+.charts-bar{
+  border:1px solid red;
+  padding:10px;
+  overflow:auto;
+  border:1px solid #F2F2F2;
+  box-shadow: #0c0c0c 1px 1px 3px;
+  margin-bottom:20px;
+}
+/*右边表格*/
+.table-right{
+  border:1px solid #F2F2F2;
+  box-shadow: #0c0c0c 1px 1px 3px;
+}
+.el-table .even-row {
+  background: #ADADAD;
+}
+.is-leaf{
+  color:#1A5F66 !important;
+}
+.table-select{
+  padding:20px 0 20px 0;
+  border-bottom:1px solid gray;
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+}
+.table-select>label{
+  line-height:35px;
+}
+
+
+/*巡店计划*/
+.header-btn{
+  margin:15px auto;
+  width:95%;
+  display:flex;
+  flex-wrap:nowrap;
+}
+.header-btn>button{
+  width:50%;
+  height:51px;
+  color:#29C7C6;
+  background:white;
+  border:1px solid #29C7C6;
+  outline:none;
+}
+.clicked{
+  background:#29C7C6 !important;
+  color:white !important;
+}
+/*巡店表格*/
+.table-plan{
+  border:1px solid #C9C9C9;
+}
+.demo-table-expand {
+  font-size: 0;
+}
+.demo-table-expand label {
+  width: 90px;
+  color: #99a9bf;
+}
+.demo-table-expand .el-form-item {
+  margin-right: 0;
+  margin-bottom: 0;
+  width: 50%;
+}
+
+/*视频监控*/
+.patrol-video{
+  width:300px;
+}
+.video-controller{
+  margin-bottom:20px;
+}
+.video-controller-btn-group{
+  display:flex;
+  flex-wrap: wrap;
+  margin-top:20px;
+}
+.video-controller-btn{
+  margin:2px;
+  height:30px;
+  padding:5px;
+  background:#F4F4F4;
+  border-radius:5px;
+  border:1px solid #DDDDDD;
+  cursor:pointer;
+}
+.blue-btn{
+  color:white;
+  background:#3c8dbc;
+  border:1px solid #367fa9;
+}
+.red-remove{
+  color:red;
+  position:absolute;
+  top:-8px;
+  cursor:pointer;
+  left:22px;
+}
+
+
+
+/*巡店表单列表*/
+.patrol-form{
+  width:75%;
+  margin:0 auto;
+}
+.patrol-video-player{
+  width:100%;
+  height:100%;
+}
+
+
+/*新建巡店表单*/
+.create-form{
+  border:1px solid #C9C9C9;
+  box-shadow:#C9C9C9 3px 3px 3px;
+  padding:20px 10% 20px 10%;
+  border-radius:4px;
+}
+.form-label{
+  text-align:right;
+  margin:20px 7% 20px 0;
+}
+.form-input{
+  -webkit-appearance: none;
+  background-color: #fff;
+  background-image: none;
+  border-radius: 4px;
+  border: 1px solid #dcdfe6;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #606266;
+  display: inline;
+  font-size: inherit;
+  height: 40px;
+  line-height: 40px;
+  outline: 0;
+  padding: 0 15px;
+  -webkit-transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+  transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+  width:70%;
+  max-width:420px;
+  min-width:220px;
+}
+.add-type-form{
+  display:inline-block;
+  width:70%;
+  vertical-align: text-top;
+}
+.el-form-item__content{
+  margin:0 !important;
+}
+/*添加按钮*/
+.add-btn{
+  font-size:25px;
+  color:#67C23A;
+  cursor:pointer;
+}
+.add-btn:hover{
+  opacity:0.7;
+  transform:scale(1.2);
+}
+.el-textarea__inner{
+  width:100%;
+  max-width:420px;
+  min-width:220px;
+}
+.el-textarea{
+  width:70% !important;
+}
+.red-text{
+  color:red;
+}
+.green-text{
+  color:#29C7C6;
+}
+
+/*巡店计划管理*/
+.btn-create-task{
+  background:#29C7C6;
+  width:100px;
+  height:30px;
+  border:none;
+  border-radius:5px;
+  color:white;
+}
+.btn-transparent{
+  background:white;
+  color:#29C7C6;
+  padding:8px 25px 8px 25px;
+  border:none;
+  outline:none;
+}
+.btn-green:hover,.btn-transparent:hover{
+  opacity:0.7;
+}
+.list-title{
+  padding:10px 25px 10px 25px;
+  background:#29C7C6;
+  color:white;
+  width:160px;
+}
+/*新建巡店计划*/
+.sub-categories{
+  display:inline-block;
+  border:1px solid #dcdfe6;
+  width:217px;
+  border-radius:5px;
+  overflow:auto;
+  max-height:400px;
+}
+.sub-categories>li{
+  border:1px solid #E5E8E8;
+  padding:8px;
+}
+.add-evaluation{
+  width:70%;
+  max-width:420px;
+  min-width:220px;
+  display:inline-block;
+}
+.add-evaluation>li:first-child{
+  border:1px solid #DCDFE6;
+  width:100%;
+  padding:4px;
+  border-radius:5px;
+  cursor:pointer;
+  color:#C4C4D6;
+  display:flex;
+  justify-content: space-between;
+}
+.add-evaluation>li:first-child:hover{
+  border:1px solid #C0C4CC;
+}
+.add-evaluation>li:first-child>div{
+
+  width:90%;
+}
+.add-evaluation>li:first-child>span:last-child{
+  width:21px;
+  height:100%;
+}
+.add-evaluation>li:first-child>span>span{
+  transition:all .2s linear;
+  margin:50% auto;
+}
+.slide-select-clicked{
+  border:1px solid #409EFF!important;
+}
+.slide-select-option{
+  border:1px solid #E4E7ED;
+  border-radius:5px;
+  margin-top:10px;
+  max-height:200px;
+  overflow:auto;
+  position:relative;
+  cursor:pointer;
+}
+.slide-select-option>li{
+  padding:8px;
+  position:relative;
+  width:100%;
+}
+.slide-select-option>li:hover{
+  background:#F5F7FA;
+}
+.option-selected{
+  color:#409EFF;
+}
+.option-selected-span{
+  background:#F0F2F5;
+  padding:3px;
+  display:inline-block;
+  margin:2px;
+  border-radius:4px;
+}
+.remove-option:hover{
+  color:#909399;
+}
+.option-arrow{
+  position:absolute;
+  top:-12px;
+  left:20px;
+  color:#F0F2F5;
+  font-size:17px;
+}
+.option-info{
+  left:550px;
+  top:47px;
+  position:absolute;
+  border:1px solid #E4E7ED;
+  border-radius:4px;
+  background:white;
+  margin-top:8px;
+  width:200px;
+  z-index:1000;
+}
+.option-info>li{
+  padding:3px;
+  border:1px solid #E5E5E5;
+}
+
+
+/*巡店记录*/
+.span-tab-btn{
+  display:inline-block;
+  padding:5px 15px 5px 15px;
+  color:#29C7C6;
+  cursor:pointer;
+  border-radius:3px;
+}
+.span-tab-btn-clicked{
+  background:#29C7C6 !important;
+  color:white;
+}
+.patrol-record-detail{
+  width:100%;
+  background:#F2F2F2;
+}
+.patrol-record-detail>li{
+  padding:10px 25px 10px 25px;
+}
+.patrol-record-detail-header{
+  display:flex;
+  justify-content:center;
+  flex-wrap:nowrap;
+}
+.patrol-record-detail-header>li:first-child{
+  border:none;
+  background:none;
+  cursor:text;
+}
+.patrol-record-detail-header>li{
+  padding:8px 20px 8px 20px;
+  min-width:100px;
+  width:15%;
+  border:1px solid #29C7C6;
+  cursor:pointer;
+  background:white;
+}
+.patrol-record-detail-row,.patrol-record-detail-row-header{
+  display:flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  border-top:1px solid #C9C9C9;
+}
+.patrol-record-detail-row:hover{
+  background:#949494;
+}
+.patrol-record-detail-row>div,.patrol-record-detail-row-header>div{
+  padding:10px;
+  width:24.9%;
+}
+.pic-box-zoom{
+  width:100% !important;
+  height:100%;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:1000;
+  background-color:rgba(0,0,0,0.9);
+}
+.pic-zoom{
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  margin:auto;
+  transform:translateZ(0) scale(35);
+}
+.table-plan .el-tree{
+  width:100%;
+  overflow:auto;
+}
+.table-plan .el-tree-node__label{
+  font-size:17px;
+}
+.table-plan .el-tree-node__expand-icon{
+  font-size:20px;
+}
+.loading-btn{
+  padding:0 !important;
+  background:none !important;
+  border:none!important;
+  color:black!important;
+}
+
+
+/*开始巡店*/
+/*计划巡店*/
+.patrol_video_list{
+  font-size: 14px;
+  color: #606266;
+  box-sizing: border-box;
+  width:100%;
+}
+/*.patrol_video_list_inner::-webkit-scrollbar {*/
+  /*display: none !important;*/
+/*}*/
+.patrol_video_list_inner{
+  overflow:auto;
+  max-height:500px;
+}
+.patrol_video_list_inner>li>ul{
+  overflow:auto;
+  max-height:400px;
+}
+.patrol_video_list .el-tree{
+  max-height: 400px !important;
+}
+.patrol_video_list>li>span,.patrol_video_list_inner>li>span,.patrol_video_list_detail>li>span{
+  display:inline-block;
+  width:29%;
+  padding:15px 20px 15px 20px;
+}
+.patrol_video_list>li>span{
+  width:100%;
+}
+.patrol_video_list_detail>li>span:first-child{
+  width:69%;
+}
+.patrol_video_list>ul>li>span:first-child{
+  width:100%;
+}
+.patrol_video_list>ul>li,.patrol_video_list_detail>li{
+  width:100%;
+  border:1px solid #EBEBEB;
+  background:#CBCBCB;
+}
+.patrol_video_list_detail>li{
+  background:#f5f5f5;
+  color:black;
+  cursor:pointer;
+}
+.patrol_video_list>ul>li:hover{
+  background:#29C7C6;
+  color:white;
+}
+.patrol_video_list_detail>li:hover{
+  background:#989595;
+  color:black;
+}
+.patrol_video_list>li:first-child{
+  background:#29C7C6;
+  color:white;
+}
+.arrow{
+  cursor:pointer;
+}
+.patrol-task-clicked{
+  background:#989595 !important;
+}
+/*视频*/
+.no-video{
+  width:821px;
+  height:410px;
+  border:1px solid black;
+  padding:200px;
+  text-align:center;
+}
+/*考评表*/
+.patrol-plan-evaluation{
+  margin-top:30px;
+  max-width:872px;
+}
+.patrol-plan-evaluation>.evaluation-tab{
+  display:flex;
+  flex-wrap: nowrap;
+  margin:0;
+}
+.patrol-plan-evaluation>.evaluation-tab>li{
+  padding:10px;
+  cursor:pointer;
+}
+.patrol-plan-evaluation>.evaluation-tab>li:hover{
+  opacity:0.8;
+}
+.gray-clicked{
+  background:#F2F2F2;
+  color:#15686A;
+}
+.evaluation-list{
+  width:100%;
+}
+.evaluation-list>li{
+  padding:20px;
+  background:#F2F2F2;
+  border:1px solid white;
+}
+.evaluation-list>li>span{
+  width:34%;
+  display:inline-block;
+}
+.evaluation-list>li>span:nth-child(2){
+  width:10%;
+}
+.evaluation-list>li>span:first-child{
+  width:20%;
+}
+.evaluation-pic{
+  width:30px;
+  height:30px;
+  transform:translateZ(0);
+  cursor:pointer;
+}
+.evaluation-audit{
+  cursor:pointer;
+  padding:10px;
+}
+.evaluation-audit-clicked{
+  background:#15686A;
+  color:white;
+}
+.evaluation-no-pic{
+  font-size:18px;
+  text-align:center;
+  cursor:pointer;
+  width:30px;
+  height:30px;
+  line-height:30px;
+  display:inline-block;
+}
+
+
+/*组织结构树*/
+.modal-tree{
+  width:100%;
+  z-index:1030;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  margin:auto;
+  overflow:auto;
+  background:rgba(0,0,0,0.8);
+}
+
